@@ -66,7 +66,7 @@ class DepositMoneyView(TransactionCreateMixin):
         )
         
         messages.success(self.request, f'{amount}$ was deposited to your account successfully')
-        send_transaction_email(self.request.user, "Deposite Message", amount, "transactions/deposite_email.html")
+        send_transaction_email(self.request.user, "Deposite Message", amount, "transactions/deposit_email.html")
         
         return super().form_valid(form)
     
